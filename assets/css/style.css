@@ -14,18 +14,105 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    color: #3a3a3a;
+    color: #000000;
 }
 
 header {
-    background-color: lightcoral;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 main {
-    background-color: lightgreen;
-    flex: 1 0 auto;
+    background: url(../images/typing-test.webp) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 110px);
+}
+
+.container {
+    width: 80vmin;
+    padding: 50px 30px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.stats {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.stats span {
+    font-weight: 600;
+}
+
+#shownText {
+    text-align: justify;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button {
+    float: right;
+    margin-top: 20px;
+    background-color: #3066f6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.result {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.result h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper span {
+    font-weight: 600;
 }
 
 footer {
-    background-color: lightblue;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer h3{
+    color: #ffffff;
+    text-align: center;
 }
