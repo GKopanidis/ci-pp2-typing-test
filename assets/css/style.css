@@ -17,6 +17,7 @@ body {
     color: #000000;
 }
 
+/* Header */
 header {
     height: auto;
     padding: 10px 0;
@@ -29,6 +30,7 @@ h1 {
     text-transform: uppercase;
 }
 
+/* Main content*/
 main {
     background: url(../images/typing-test.webp) no-repeat center center/cover;
     flex-grow: 1;
@@ -89,7 +91,7 @@ textarea {
 button {
     float: right;
     margin-top: 20px;
-    background-color: #3066f6;
+    background-color: blue;
     color: #ffffff;
     border: none;
     padding: 10px 30px;
@@ -100,7 +102,7 @@ button {
 .result {
     margin-bottom: 20px;
     display: none;
-    
+
 }
 
 .result h3 {
@@ -118,6 +120,7 @@ button {
     font-weight: 600;
 }
 
+/* Footer */
 footer {
     height: auto;
     padding: 10px 20px;
