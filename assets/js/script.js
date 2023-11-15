@@ -8,7 +8,9 @@ const userInput = document.getElementById("shownTextInput");
 let shownText = "";
 let time = 60;
 let timer = "";
-let mistakes = 0;
+let correctWords = 0;
+let incorrectWords = 0;
+let keystrokes = 0;
 
 
 /**
@@ -34,6 +36,9 @@ const renderNewQuote = async () => {
  * Comparing input words with quote
  */
 userInput.addEventListener("input", () => {
+    keystrokes++;
+})
+userInput.addEventListener("input", () => {
     let quoteChars = document.querySelectorAll(".quote-chars");
     //Create an array from received span tags
     quoteChars = Array.from(quoteChars);
@@ -43,13 +48,13 @@ userInput.addEventListener("input", () => {
     quoteChars.forEach((char, index) => {
         //Check char(quote char) = userInputChars[index](input char)
         if (char.innerText == userInputChars[index]) {
-            char.classList.add("correct");
+            char.classList.add("correctWords");
         }
         //If user hasn't entered anything or backspaced
         else if(userInputChars[index] == null) {
             //Remove class if any
-            if(char.classList.contains("correct")) {
-                char.classList.remove("correct");
+            if(char.classList.contains("correctWords")) {
+                char.classList.remove("correctWords");
             }
             else {
                 char.classList.remove("incorrectWords");
@@ -67,7 +72,7 @@ userInput.addEventListener("input", () => {
         }
         // Returns true if all chars are entered correctly
         let check = quoteChars.every(element=> {
-            return element.classList.contains("correct");
+            return element.classList.contains("correctWords");
         });
         if (check) {
             displayResult();
@@ -79,6 +84,7 @@ userInput.addEventListener("input", () => {
  * Start Test
  */
 const startTest = () => {
+    correctWords = 0;
     incorrectWords = 0;
     timer = "";
     userInput.disabled = false;
@@ -130,4 +136,6 @@ const displayResult = () => {
         timeTaken = (60 - time) / 100;
     }
     document.getElementById("wpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
+    document.getElementById("accuracy").innerText = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100) + "%";
+    document.getElementById("keystrokes").innerText = + keystrokes;
 };

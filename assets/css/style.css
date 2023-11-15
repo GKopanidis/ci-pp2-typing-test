@@ -111,16 +111,21 @@ button {
     font-size: 22px;
 }
 
-.wrapper {
+#wrapper {
     display: flex;
     justify-content: space-around;
 }
 
-.wrapper span {
-    font-weight: 600;
+#wrapper p {
+    text-align: left;
 }
 
-.correct {
+.wrapper span {
+    font-weight: 600;
+    text-align: right;
+}
+
+.correctWords {
     color: lightseagreen;
 }
 
