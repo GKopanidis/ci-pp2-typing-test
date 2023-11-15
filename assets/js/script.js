@@ -28,8 +28,20 @@ const renderNewQuote = async () => {
     });
     //Join array for displaying
     shownTextSection.innerHTML += arr.join("");
-    console.log(arr);
-}
+};
+
+/**
+ * Start Test
+ */
+const startTest = () => {
+    incorrectWords = 0;
+    timer = "";
+    userInput.disabled = false;
+    document.getElementById("start-test").style.display = "none";
+    document.getElementById("stop-test").style.display = "block";
+};
+
+
 
 window.onload = () => {
     userInput.value = "";
@@ -37,4 +49,4 @@ window.onload = () => {
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
-}
+};
