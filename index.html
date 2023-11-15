@@ -30,6 +30,7 @@
                 <div class="stats">
                     <h2>Test your skills</h2>
                     <p>Time: <span id="timer">0s</span></p>
+                    <p>IncorrectWords: <span id="incorrectWords">0</span></p>
                 </div>
                 <div id="shownText" onmousedown="return false" onselectstart="return false">This is some dummy text.
                     This is some dummy text. This is some dummy text. This is some dummy text. This is some dummy text.
@@ -39,8 +40,8 @@
                 <br>
                 <label for="shownTextInput" class="visually-hidden">Your Text:</label>
                 <textarea rows="3" id="shownTextInput" placeholder="Start typing when test starts..."></textarea>
-                <button id="start-test">Start Test</button>
-                <button id="stop-test">Stop Test</button>
+                <button id="start-test" onclick="startTest()">Start Test</button>
+                <button id="stop-test" onclick="displayResult()">Stop Test</button>
                 <div class="result">
                     <h3>Result</h3>
                     <div class="wrapper">
@@ -79,6 +80,9 @@
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/3032f27b4f.js" crossorigin="anonymous"></script>
+
+    <!-- Script.js-->
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
