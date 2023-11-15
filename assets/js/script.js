@@ -70,7 +70,7 @@ userInput.addEventListener("input", () => {
             return element.classList.contains("correct");
         });
         if (check) {
-            console.log("PERFECT :D");
+            displayResult();
         }
     });
 });
@@ -82,11 +82,10 @@ const startTest = () => {
     incorrectWords = 0;
     timer = "";
     userInput.disabled = false;
+    timeReduce();
     document.getElementById("start-test").style.display = "none";
     document.getElementById("stop-test").style.display = "block";
 };
-
-
 
 window.onload = () => {
     userInput.value = "";
@@ -94,4 +93,41 @@ window.onload = () => {
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
+};
+
+/**
+ * Set timer
+ */
+const timeReduce = () => {
+    time = 60;
+    timer = setInterval(updateTimer, 1000);
+}
+
+/**
+ * Update timer
+ */
+function updateTimer() {
+    if(time == 0) {
+        //End test if timer reaches 0
+        displayResult();
+    }
+    else {
+        document.getElementById("timer").innerText = --time + "s";
+    }
+}
+
+/**
+ * End Test
+ */
+const displayResult = () => {
+    //display result div
+    document.querySelector(".result").style.display = "block";
+    clearInterval(timer);
+    document.getElementById("stop-test").style.display = "none";
+    userInput.disabled = true;
+    let timeTaken = 1;
+    if(time != 0) {
+        timeTaken = (60 - time) / 100;
+    }
+    document.getElementById("wpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
 };
