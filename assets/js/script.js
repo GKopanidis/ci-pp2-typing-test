@@ -35,6 +35,8 @@ const renderNewQuote = async () => {
  */
 userInput.addEventListener("input", () => {
     let quoteChars = document.querySelectorAll(".quote-chars");
+    //Create an array from received span tags
+    quoteChars = Array.from(quoteChars);
     console.log(quoteChars);
 });
 
