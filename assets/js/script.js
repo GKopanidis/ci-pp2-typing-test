@@ -37,7 +37,17 @@ userInput.addEventListener("input", () => {
     let quoteChars = document.querySelectorAll(".quote-chars");
     //Create an array from received span tags
     quoteChars = Array.from(quoteChars);
-    console.log(quoteChars);
+    //Create an array from input chars
+    let userInputChars = userInput.value.split("");
+    //loop through each char in quote
+    quoteChars.forEach((char, index) => {
+        //Check char(quote char) = userInputChars[index](input char)
+        if (char.innerText == userInputChars[index]) {
+            char.classList.add("correct");
+        }    
+    })
+
+
 });
 
 /**

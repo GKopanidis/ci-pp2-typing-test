@@ -120,6 +120,14 @@ button {
     font-weight: 600;
 }
 
+.correct {
+    color: lightseagreen;
+}
+
+.incorrect {
+    color: red;
+}
+
 /* Footer */
 footer {
     height: auto;
