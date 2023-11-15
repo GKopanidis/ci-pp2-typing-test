@@ -15,20 +15,20 @@ let mistakes = 0;
  * Display random quote
  */
 const renderNewQuote = async () => {
-    /**
-     * Get a random quote from api
-     */
+    //Get a random quote from api
     const response = await fetch(quoteApiUrl);
-    /**
-     * Store response
-     */
+    //Store response
     let data = await response.json();
-    /**
-     * Access quote
-     */
+    //Access quote
     quote = data.content;
-
-    console.log(data.content)
+    //Array of characters in the quote
+    let arr = quote.split("").map((value) => {
+        //wrap the characters in a span tag
+        return "<span class='quote-chars'>" + value + "</span>";
+    });
+    //Join array for displaying
+    shownTextSection.innerHTML += arr.join("");
+    console.log(arr);
 }
 
 window.onload = () => {
