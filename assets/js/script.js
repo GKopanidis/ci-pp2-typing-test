@@ -64,10 +64,15 @@ userInput.addEventListener("input", () => {
                 char.classList.add("incorrectWords");
             }
             document.getElementById("incorrectWords").innerText = incorrectWords;
-        }    
-    })
-
-
+        }
+        // Returns true if all chars are entered correctly
+        let check = quoteChars.every(element=> {
+            return element.classList.contains("correct");
+        });
+        if (check) {
+            console.log("PERFECT :D");
+        }
+    });
 });
 
 /**
