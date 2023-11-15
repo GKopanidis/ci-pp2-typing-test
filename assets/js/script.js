@@ -11,7 +11,10 @@ let timer = "";
 let correctWords = 0;
 let incorrectWords = 0;
 let keystrokes = 0;
-
+let lastCorrectIndex = -1;
+let correctIndexes = new Set();
+let incorrectIndexes = new Set();
+let isTestCompleted = false;
 
 /**
  * Display random quote
@@ -33,64 +36,67 @@ const renderNewQuote = async () => {
 };
 
 /**
- * Comparing input words with quote
+ * Event Listener, comparing input words with quote
  */
 userInput.addEventListener("input", () => {
     keystrokes++;
-})
-userInput.addEventListener("input", () => {
     let quoteChars = document.querySelectorAll(".quote-chars");
-    //Create an array from received span tags
     quoteChars = Array.from(quoteChars);
-    //Create an array from input chars
     let userInputChars = userInput.value.split("");
-    //loop through each char in quote
+    correctWords = 0;
+
     quoteChars.forEach((char, index) => {
-        //Check char(quote char) = userInputChars[index](input char)
         if (char.innerText == userInputChars[index]) {
             char.classList.add("correctWords");
-        }
-        //If user hasn't entered anything or backspaced
-        else if(userInputChars[index] == null) {
-            //Remove class if any
-            if(char.classList.contains("correctWords")) {
+            if (!correctIndexes.has(index)) {
+                correctIndexes.add(index);
+            }
+        } else {
+            if (char.classList.contains("correctWords")) {
                 char.classList.remove("correctWords");
             }
-            else {
-                char.classList.remove("incorrectWords");
-            }
-        }
-        //If user enter wrong char
-        else{
-            //Checks if allready have added fail class
-            if(!char.classList.contains("incorrectWords")) {
-                //increment and diplay incorrect
-                incorrectWords += 1;
+            if (index < userInputChars.length && !char.classList.contains("incorrectWords")) {
                 char.classList.add("incorrectWords");
+                if (!incorrectIndexes.has(index)) {
+                    incorrectWords++;
+                    incorrectIndexes.add(index);
+                }
             }
-            document.getElementById("incorrectWords").innerText = incorrectWords;
-        }
-        // Returns true if all chars are entered correctly
-        let check = quoteChars.every(element=> {
-            return element.classList.contains("correctWords");
-        });
-        if (check) {
-            displayResult();
         }
     });
+
+    correctWords = correctIndexes.size;
+
+    document.getElementById("correctWords").innerText = correctWords;
+    document.getElementById("incorrectWords").innerText = incorrectWords;
+
+    // Returns true if all chars are entered correctly
+   isTestCompleted = quoteChars.length === correctIndexes.size;
+    if (isTestCompleted) {
+        displayResult();
+    }
 });
 
 /**
  * Start Test
  */
 const startTest = () => {
+    userInput.disabled = false;
+    userInput.value = "";
     correctWords = 0;
     incorrectWords = 0;
+    keystrokes = 0;
+    correctIndexes.clear();
+    incorrectIndexes.clear()
     timer = "";
-    userInput.disabled = false;
     timeReduce();
     document.getElementById("start-test").style.display = "none";
     document.getElementById("stop-test").style.display = "block";
+    shownTextSection.innerHTML = "";
+    renderNewQuote();
+    setTimeout(() => {
+        userInput.focus();
+    }, 0);
 };
 
 window.onload = () => {
@@ -107,7 +113,7 @@ window.onload = () => {
 const timeReduce = () => {
     time = 60;
     timer = setInterval(updateTimer, 1000);
-}
+};
 
 /**
  * Update timer
@@ -120,7 +126,7 @@ function updateTimer() {
     else {
         document.getElementById("timer").innerText = --time + "s";
     }
-}
+};
 
 /**
  * End Test
@@ -138,4 +144,17 @@ const displayResult = () => {
     document.getElementById("wpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
     document.getElementById("accuracy").innerText = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100) + "%";
     document.getElementById("keystrokes").innerText = + keystrokes;
+    document.getElementById("start-test").style.display = "block";
+    isTestCompleted = false;
 };
+
+document.addEventListener("keydown", function(event) {
+    let resultDisplayed = document.querySelector(".result").style.display === "block";
+
+    if (event.key === "Enter" && (resultDisplayed || testCompleted)) {
+        userInput.disabled = false;
+        setTimeout(() => {
+            startTest();
+        }, 0);
+    }
+});
