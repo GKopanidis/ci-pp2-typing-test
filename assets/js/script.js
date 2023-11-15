@@ -31,6 +31,14 @@ const renderNewQuote = async () => {
 };
 
 /**
+ * Comparing input words with quote
+ */
+userInput.addEventListener("input", () => {
+    let quoteChars = document.querySelectorAll(".quote-chars");
+    console.log(quoteChars);
+});
+
+/**
  * Start Test
  */
 const startTest = () => {
