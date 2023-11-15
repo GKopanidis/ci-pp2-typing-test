@@ -44,6 +44,26 @@ userInput.addEventListener("input", () => {
         //Check char(quote char) = userInputChars[index](input char)
         if (char.innerText == userInputChars[index]) {
             char.classList.add("correct");
+        }
+        //If user hasn't entered anything or backspaced
+        else if(userInputChars[index] == null) {
+            //Remove class if any
+            if(char.classList.contains("correct")) {
+                char.classList.remove("correct");
+            }
+            else {
+                char.classList.remove("incorrectWords");
+            }
+        }
+        //If user enter wrong char
+        else{
+            //Checks if allready have added fail class
+            if(!char.classList.contains("incorrectWords")) {
+                //increment and diplay incorrect
+                incorrectWords += 1;
+                char.classList.add("incorrectWords");
+            }
+            document.getElementById("incorrectWords").innerText = incorrectWords;
         }    
     })
 
