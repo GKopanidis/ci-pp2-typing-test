@@ -141,7 +141,7 @@ const displayResult = () => {
     if(time != 0) {
         timeTaken = (60 - time) / 100;
     }
-    document.getElementById("wpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
+    document.getElementById("cpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(2) + " cpm";
     document.getElementById("accuracy").innerText = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100) + "%";
     document.getElementById("keystrokes").innerText = + keystrokes;
     document.getElementById("start-test").style.display = "block";
