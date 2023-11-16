@@ -156,6 +156,7 @@ button {
 /* The modal button */
 #myBtn {
     margin-right: 10px;
+    margin-bottom: 20px;
     background-color: green;
 }
 
