@@ -20,6 +20,7 @@ let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
 
 
+
 /**
  * Display random quote
  */
@@ -39,14 +40,25 @@ const renderNewQuote = async () => {
     shownTextSection.innerHTML += arr.join("");
 };
 
+// Hinzugefügte Funktion zur Aktualisierung von wordCount
+const updateWordCount = () => {
+    const words = userInput.value.trim().split(/\s+/);
+    const wordCount = words.filter(word => word.length > 0).length;
+    document.getElementById("wordCount").innerText = wordCount;
+};
+
 /**
  * Event Listener, comparing input words with quote
  */
 userInput.addEventListener("input", () => {
+    if (!timer) {
+        timeReduce();
+    }
     keystrokes++;
     let quoteChars = document.querySelectorAll(".quote-chars");
     quoteChars = Array.from(quoteChars);
     let userInputChars = userInput.value.split("");
+    updateWordCount();
 
     quoteChars.forEach((char, index) => {
         if (char.innerText == userInputChars[index]) {
@@ -96,7 +108,6 @@ const startTest = () => {
     timer = "";
     document.getElementById("correctWords").innerText = correctWords;
     document.getElementById("incorrectWords").innerText = incorrectWords;
-    timeReduce();
     document.getElementById("start-test").style.display = "none";
     document.getElementById("stop-test").style.display = "block";
     shownTextSection.innerHTML = "";
@@ -148,6 +159,9 @@ const displayResult = () => {
     if (time != 0) {
         timeTaken = (60 - time) / 100;
     }
+    const words = userInput.value.trim().split(/\s+/).length;
+    const totalWords = (words / timeTaken).toFixed(0);
+    document.getElementById("totalWords").innerText = totalWords + " wpm";
     document.getElementById("cpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(0) + " cpm";
 
     let accuracy = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100);
