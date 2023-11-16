@@ -77,6 +77,7 @@ main {
 
 #shownText {
     text-align: left;
+    font-size: x-large;
 }
 
 textarea {
@@ -85,7 +86,7 @@ textarea {
     border-radius: 5px;
     padding: 10px 5px;
     margin-top: 10px;
-    font-size: 16px;
+    font-size: x-large;
 }
 
 button {
@@ -96,7 +97,11 @@ button {
     border: none;
     padding: 10px 30px;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: large;
+}
+
+#myBtn {
+    margin-right: 10px;
 }
 
 .result {
@@ -108,7 +113,7 @@ button {
 .result h3 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: x-large;
 }
 
 #wrapper {
@@ -116,13 +121,22 @@ button {
     justify-content: space-around;
 }
 
-#wrapper p {
-    text-align: left;
+.wrapper p {
+    text-align: center;
+    font-size: large;
 }
 
 .wrapper span {
     font-weight: 600;
     text-align: right;
+    font-size: large;
+}
+
+#godlike {
+    font-size: xx-large;
+    color: green;
+    text-align: center;
+
 }
 
 .correctWords {
@@ -152,5 +166,43 @@ footer {
 #social-networks i {
     font-size: 120%;
     padding: 5%;
-    color: #fafafa;
+    color: #ffffff;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #ffffff;
+    margin: 40% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
