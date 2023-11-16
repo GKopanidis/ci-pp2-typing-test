@@ -100,8 +100,15 @@ button {
     font-size: large;
 }
 
-#myBtn {
-    margin-right: 10px;
+#stop-test {
+    float: right;
+    margin-top: 20px;
+    background-color: rgb(196, 32, 32);
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: large;
 }
 
 .result {
@@ -136,7 +143,6 @@ button {
     font-size: xx-large;
     color: green;
     text-align: center;
-
 }
 
 .correctWords {
@@ -147,7 +153,13 @@ button {
     color: red;
 }
 
-/* The Modal (background) */
+/* The modal button */
+#myBtn {
+    margin-right: 10px;
+    background-color: green;
+}
+
+/* The modal (background) */
 .modal {
     display: none;
     position: fixed;
