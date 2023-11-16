@@ -92,7 +92,7 @@ const startTest = () => {
     incorrectWords = 0;
     keystrokes = 0;
     correctIndexes.clear();
-    incorrectIndexes.clear()
+    incorrectIndexes.clear();
     timer = "";
     document.getElementById("correctWords").innerText = correctWords;
     document.getElementById("incorrectWords").innerText = incorrectWords;
@@ -133,7 +133,7 @@ function updateTimer() {
     else {
         document.getElementById("timer").innerText = --time + "s";
     }
-};
+}
 
 /**
  * End Test
@@ -187,16 +187,16 @@ document.addEventListener("keydown", function (event) {
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
     modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
