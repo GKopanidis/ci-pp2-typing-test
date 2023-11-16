@@ -152,13 +152,13 @@ const displayResult = () => {
 
     let accuracy = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100);
     document.getElementById("accuracy").innerText = accuracy + "%";
-    // Check, if accuracy is 100%
+    // Check if accuracy is 100%
     if (accuracy === 100) {
-        // Show text, if accuracy is 100%
+        // Show text if accuracy is 100%
         document.getElementById("godlike").style.display = "block";
         document.getElementById("godlike").innerText = "GODLIKE :D";
     } else {
-        // Hide text, if accuracy isnt 100%
+        // Hide text if accuracy isn't 100%
         document.getElementById("godlike").style.display = "none";
     }
 
@@ -167,6 +167,9 @@ const displayResult = () => {
     isTestCompleted = false;
 };
 
+/**
+ * Event listener for pressing Enter
+ */
 document.addEventListener("keydown", function (event) {
     let resultDisplayed = document.querySelector(".result").style.display === "block";
     if (event.key === "Enter") {
