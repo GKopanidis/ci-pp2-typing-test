@@ -139,7 +139,7 @@ function updateTimer() {
  * End Test
  */
 const displayResult = () => {
-    //display result div
+    //Display result div
     document.querySelector(".result").style.display = "block";
     clearInterval(timer);
     document.getElementById("stop-test").style.display = "none";
