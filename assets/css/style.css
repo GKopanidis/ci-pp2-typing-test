@@ -30,6 +30,10 @@ h1 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-size: x-large;
+}
+
 /* Main content*/
 main {
     background: url(../images/typing-test.webp) no-repeat center center/cover;
@@ -89,7 +93,7 @@ textarea {
     font-size: x-large;
 }
 
-#username-label, #display-username {
+#username-label, #display-username, #username-value {
     margin-bottom: 10px;
     font-size: x-large;
 }
@@ -176,7 +180,7 @@ button {
 }
 
 .hof {
-    font-size: large;
+    font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
