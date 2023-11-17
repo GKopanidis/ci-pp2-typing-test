@@ -204,6 +204,13 @@ const displayResult = () => {
         } 
     }
 
+    //Save results to local storage
+    localStorage.setItem('wordsPerMinute', wordsPerMinute);
+    localStorage.setItem('charsPerMinute', charsPerMinute);
+    localStorage.setItem('accuracy', accuracy);
+    localStorage.setItem('keystrokes', keystrokes);
+    console.log(wordsPerMinute, charsPerMinute, accuracy, keystrokes);
+
     // View results
     document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
     document.getElementById("keystrokes").innerText = keystrokes;
