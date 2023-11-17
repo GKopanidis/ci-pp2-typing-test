@@ -50,6 +50,7 @@ main {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .visually-hidden {
@@ -88,12 +89,24 @@ textarea {
     font-size: x-large;
 }
 
+#username-label, #display-username {
+    font-size: x-large;
+}
+
+#username {
+    font-size: x-large;
+}
+
 #save-username {
     background-color: green;
     color: #ffffff;
-    border: none;
     border-radius: 5px;
     font-size: large;
+}
+
+.username-input {
+    text-align: center;
+    align-self: center;
 }
 
 #change-username {
@@ -128,7 +141,6 @@ button {
 .result {
     margin-bottom: 20px;
     display: none;
-
 }
 
 .result h3 {
@@ -157,6 +169,13 @@ button {
     font-size: xx-large;
     color: green;
     text-align: center;
+}
+
+.hof {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .correctWords {

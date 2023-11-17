@@ -231,11 +231,13 @@ const displayResult = () => {
         } 
     }
 
-    //Save results to local storage
-    localStorage.setItem('wordsPerMinute', wordsPerMinute);
-    localStorage.setItem('charsPerMinute', charsPerMinute);
-    localStorage.setItem('accuracy', accuracy);
-    localStorage.setItem('keystrokes', keystrokes);
+    let first = {"wordsPerMinute": wordsPerMinute, "charsPerMinute": charsPerMinute, "accuracy": accuracy, "keystrokes": keystrokes, "username": document.getElementById('username').value};
+    let second = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
+    let third = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
+    if (!localStorage.getItem(first)) {
+        localStorage.setItem('first', first)
+    }
+    //console.log(localStorage.getItem(first).wordsPerMinute);
 
     // View results
     document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
@@ -243,7 +245,7 @@ const displayResult = () => {
     document.getElementById("accuracy").innerText = accuracy + "%";
     document.getElementById("wordsPerMinute").innerText = wordsPerMinute + " wpm";
 
-    // Display "GODLIKE" when accuracy is 100%
+    // Display "GODLIKE :D" when accuracy is 100%
     if (accuracy === 100 && isTestCompleted) {
         document.getElementById("godlike").style.display = "block";
         document.getElementById("godlike").innerText = "GODLIKE :D";
