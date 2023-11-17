@@ -40,7 +40,7 @@ const renderNewQuote = async (min, max) => {
     shownTextSection.innerHTML += arr.join("");
 };
 
-// Hinzugefügte Funktion zur Aktualisierung von wordCount
+// wordCount function
 const updateWordCount = () => {
     const words = userInput.value.trim().split(/\s+/);
     wordCount = words.filter(word => word.length > 0).length;
@@ -78,7 +78,7 @@ userInput.addEventListener("input", () => {
         }
     });
 
-    correctWords = correctIndexes.size;
+        correctWords = correctIndexes.size;
     incorrectWords = incorrectIndexes.size;
 
     document.getElementById("correctWords").innerText = correctWords;
@@ -131,6 +131,19 @@ window.onload = () => {
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
+    document.getElementById('save-username').addEventListener('click', function() {
+        let username = document.getElementById('username').value;
+        localStorage.setItem('username', username);
+    
+        // Hide label, button and input field
+        document.getElementById('username-label').style.display = 'none';
+        this.style.display = 'none'; // this is for "save-username" button
+        document.getElementById('username').style.display = 'none';
+    
+        // Show saved username
+        document.getElementById('username-value').textContent = username;
+        document.getElementById('display-username').style.display = 'block';
+    });
 };
 
 /**
@@ -163,7 +176,7 @@ const displayResult = () => {
     let charsPerMinute = 0;
     let accuracy = 0;
 
-    //Berechnung der Gesamtanzahl der Wörter und Zeichen pro Minute
+    //Calculating the total number of words and characters per minute
     const words = userInput.value.trim().split(/\s+/).length;
     
     //Display result div
@@ -175,7 +188,7 @@ const displayResult = () => {
     clearInterval(timer);
     userInput.disabled = true;
     
-    // Berechnen der verstrichenen Zeit
+    // Calculate elapsed time
     if (time <= 0) {
         timeTaken = 1;
     }
@@ -191,13 +204,13 @@ const displayResult = () => {
         } 
     }
 
-    // Anzeigen der Ergebnisse
+    // View results
     document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
     document.getElementById("keystrokes").innerText = keystrokes;
     document.getElementById("accuracy").innerText = accuracy + "%";
     document.getElementById("wordsPerMinute").innerText = wordsPerMinute + " wpm";
 
-    // Anzeige von "GODLIKE", wenn die Genauigkeit 100% beträgt
+    // Display "GODLIKE" when accuracy is 100%
     if (accuracy === 100 && isTestCompleted) {
         document.getElementById("godlike").style.display = "block";
         document.getElementById("godlike").innerText = "GODLIKE :D";
@@ -205,7 +218,7 @@ const displayResult = () => {
         document.getElementById("godlike").style.display = "none";
     }    
 
-    // Zurücksetzen der Testanzeige
+    // Resetting the test display
     document.getElementById("easy-mode").style.display = "block";
     document.getElementById("hard-mode").style.display = "block";
     document.getElementById("extreme-mode").style.display = "block";

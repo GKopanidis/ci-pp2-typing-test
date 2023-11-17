@@ -39,6 +39,13 @@
                 <br>
                 <label for="shownTextInput" class="visually-hidden">Your Text:</label>
                 <textarea rows="5" id="shownTextInput" placeholder="Start typing when test starts..."></textarea>
+                <br>
+                <div class="username-input">
+                    <label for="username" id="username-label">Your Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Your username">
+                    <button id="save-username">Save</button>
+                    <p id="display-username" style="display: none;">Ihre Benutzername: <span id="username-value"></span></p>
+                </div>
                 <button id="easy-mode" onclick="startTest(90, 100)">Start Easy Mode</button>
                 <button id="hard-mode" onclick="startTest(190, 200)">Start Hard Mode</button>
                 <button id="extreme-mode" onclick="startTest(290, 300)">Start Extreme Mode</button>

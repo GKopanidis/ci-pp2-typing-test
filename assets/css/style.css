@@ -89,6 +89,10 @@ textarea {
     font-size: x-large;
 }
 
+.username-input, #username {
+    font-size: x-large;
+}
+
 button {
     float: right;
     margin-top: 20px;
