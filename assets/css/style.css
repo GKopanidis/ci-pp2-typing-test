@@ -48,7 +48,7 @@ main {
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    display: flex;
+    display: flex ;
     flex-direction: column;
     justify-content: center;
 }
@@ -90,11 +90,13 @@ textarea {
 }
 
 #username-label, #display-username {
+    margin-bottom: 10px;
     font-size: x-large;
 }
 
 #username {
     font-size: x-large;
+    margin-bottom: 5px;
 }
 
 #save-username {
@@ -102,6 +104,7 @@ textarea {
     color: #ffffff;
     border-radius: 5px;
     font-size: large;
+    margin: auto;
 }
 
 .username-input {
@@ -115,6 +118,7 @@ textarea {
     border: none;
     border-radius: 5px;
     font-size: large;
+    margin: auto;
 }
 
 button {
@@ -256,4 +260,10 @@ footer {
     font-size: 120%;
     padding: 5%;
     color: #ffffff;
+}
+
+@media (max-width: 400px) {
+    input[type="text"] {
+        width: 100%;
+    }
 }
