@@ -1,15 +1,17 @@
 /**
  * Generates random quotes 
  */
-const quoteApiUrl = "https://api.quotable.io/random?minLength=80&maxLength=100";
 const shownTextSection = document.getElementById("shownText");
 const userInput = document.getElementById("shownTextInput");
 
+let minLength = 80;
+let maxLength = 100;
 let shownText = "";
 let time = 60;
 let timer = "";
 let correctWords = 0;
 let incorrectWords = 0;
+let wordCount = 0;
 let keystrokes = 0;
 let lastCorrectIndex = -1;
 let correctIndexes = new Set();
@@ -19,14 +21,12 @@ let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
 
-
-
 /**
  * Display random quote
  */
-const renderNewQuote = async () => {
+const renderNewQuote = async (min, max) => {
     //Get a random quote from api
-    const response = await fetch(quoteApiUrl);
+    const response = await fetch("https://api.quotable.io/random?minLength="+min+"&maxLength="+max);
     //Store response
     let data = await response.json();
     //Access quote
@@ -43,7 +43,7 @@ const renderNewQuote = async () => {
 // Hinzugefügte Funktion zur Aktualisierung von wordCount
 const updateWordCount = () => {
     const words = userInput.value.trim().split(/\s+/);
-    const wordCount = words.filter(word => word.length > 0).length;
+    wordCount = words.filter(word => word.length > 0).length;
     document.getElementById("wordCount").innerText = wordCount;
 };
 
@@ -94,24 +94,33 @@ userInput.addEventListener("input", () => {
 /**
  * Start Test
  */
-const startTest = () => {
+const startTest = (min, max) => {
     if (timer) {
         clearInterval(timer);
     }
     userInput.disabled = false;
     userInput.value = "";
+    timer = 0;
     correctWords = 0;
     incorrectWords = 0;
+    wordCount = 0;
+    accuracy = 0;
+    charsPerMinute = 0;
     keystrokes = 0;
+    wordsPerMinute = 0;
     correctIndexes.clear();
     incorrectIndexes.clear();
-    timer = "";
+    document.querySelector(".result").style.display = "none";
+    document.getElementById("timer").innerText = 60;
     document.getElementById("correctWords").innerText = correctWords;
     document.getElementById("incorrectWords").innerText = incorrectWords;
-    document.getElementById("start-test").style.display = "none";
+    document.getElementById("wordCount").innerText = wordCount;
+    document.getElementById("easy-mode").style.display = "none";
+    document.getElementById("hard-mode").style.display = "none";
+    document.getElementById("extreme-mode").style.display = "none";
     document.getElementById("stop-test").style.display = "block";
     shownTextSection.innerHTML = "";
-    renderNewQuote();
+    renderNewQuote(min, max);
     setTimeout(() => {
         userInput.focus();
     }, 0);
@@ -119,7 +128,6 @@ const startTest = () => {
 
 window.onload = () => {
     userInput.value = "";
-    document.getElementById("start-test").style.display = "block";
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
@@ -142,7 +150,7 @@ function updateTimer() {
         displayResult();
     }
     else {
-        document.getElementById("timer").innerText = --time + "s";
+        document.getElementById("timer").innerText = --time;
     }
 }
 
@@ -150,34 +158,58 @@ function updateTimer() {
  * End Test
  */
 const displayResult = () => {
+    let timeTaken = 60 - time;
+    let wordsPerMinute = 0;
+    let charsPerMinute = 0;
+    let accuracy = 0;
+
+    //Berechnung der Gesamtanzahl der Wörter und Zeichen pro Minute
+    const words = userInput.value.trim().split(/\s+/).length;
+    
     //Display result div
     document.querySelector(".result").style.display = "block";
-    clearInterval(timer);
+    document.getElementById("easy-mode").style.display = "block";
+    document.getElementById("hard-mode").style.display = "block";
+    document.getElementById("extreme-mode").style.display = "block";
     document.getElementById("stop-test").style.display = "none";
+    clearInterval(timer);
     userInput.disabled = true;
-    let timeTaken = 1;
-    if (time != 0) {
-        timeTaken = (60 - time) / 100;
+    
+    // Berechnen der verstrichenen Zeit
+    if (time <= 0) {
+        timeTaken = 1;
     }
-    const words = userInput.value.trim().split(/\s+/).length;
-    const totalWords = (words / timeTaken).toFixed(0);
-    document.getElementById("totalWords").innerText = totalWords + " wpm";
-    document.getElementById("cpm").innerText = (userInput.value.length / 5 / timeTaken).toFixed(0) + " cpm";
+    
+    if (words > 0 && timeTaken > 0) {
+        wordsPerMinute = (words / timeTaken * 60).toFixed(0);
+        charsPerMinute = (userInput.value.length / timeTaken * 60).toFixed(0);
+        if (userInput.value.length == 0){
+            accuracy = 0;
+            wordsPerMinute = 0;
+        } else {
+            accuracy = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100);
+        } 
+    }
 
-    let accuracy = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100);
+    // Anzeigen der Ergebnisse
+    document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
+    document.getElementById("keystrokes").innerText = keystrokes;
     document.getElementById("accuracy").innerText = accuracy + "%";
-    // Check if accuracy is 100%
-    if (accuracy === 100) {
-        // Show text if accuracy is 100%
+    document.getElementById("wordsPerMinute").innerText = wordsPerMinute + " wpm";
+
+    // Anzeige von "GODLIKE", wenn die Genauigkeit 100% beträgt
+    if (accuracy === 100 && isTestCompleted) {
         document.getElementById("godlike").style.display = "block";
         document.getElementById("godlike").innerText = "GODLIKE :D";
     } else {
-        // Hide text if accuracy isn't 100%
         document.getElementById("godlike").style.display = "none";
-    }
+    }    
 
-    document.getElementById("keystrokes").innerText = + keystrokes;
-    document.getElementById("start-test").style.display = "block";
+    // Zurücksetzen der Testanzeige
+    document.getElementById("easy-mode").style.display = "block";
+    document.getElementById("hard-mode").style.display = "block";
+    document.getElementById("extreme-mode").style.display = "block";
+    document.getElementById("stop-test").style.display = "none";
     isTestCompleted = false;
 };
 

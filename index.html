@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="stats">
                     <h2>Test your skills</h2>
-                    <p>Timer: <span id="timer">0s</span></p>
+                    <p>Timer: <span id="timer">0</span>s</p>
                     <p>Correct: <span id="correctWords">0</span></p>
                     <p>Incorrect: <span id="incorrectWords">0</span></p>
                     <p>Words: <span id="wordCount">0</span></p>
@@ -38,17 +38,19 @@
                 </div>
                 <br>
                 <label for="shownTextInput" class="visually-hidden">Your Text:</label>
-                <textarea rows="3" id="shownTextInput" placeholder="Start typing when test starts..."></textarea>
-                <button id="start-test" onclick="startTest()">Start Test</button>
+                <textarea rows="5" id="shownTextInput" placeholder="Start typing when test starts..."></textarea>
+                <button id="easy-mode" onclick="startTest(90, 100)">Start Easy Mode</button>
+                <button id="hard-mode" onclick="startTest(190, 200)">Start Hard Mode</button>
+                <button id="extreme-mode" onclick="startTest(290, 300)">Start Extreme Mode</button>
                 <button id="stop-test" onclick="displayResult()">Stop Test</button>
                 <br>
                 <div class="result">
                     <h3>Result</h3>
                     <div class="wrapper">
                         <p>Accuracy: <span id="accuracy"></span></p>
-                        <p>Speed (Cicks per Minute): <span id="cpm"></span></p>
+                        <p>Speed (Chars per Minute): <span id="charsPerMinute"></span></p>
                         <p>Keystrokes: <span id="keystrokes"></span></p>
-                        <p>Words per Minute: <span id="totalWords"></span></p>
+                        <p>Words per Minute: <span id="wordsPerMinute"></span></p>
                         <br>
                         <div id="godlike" style="display: none">
                         </div>
