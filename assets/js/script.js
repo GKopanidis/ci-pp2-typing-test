@@ -143,6 +143,33 @@ window.onload = () => {
         // Show saved username
         document.getElementById('username-value').textContent = username;
         document.getElementById('display-username').style.display = 'block';
+        document.getElementById('change-username').style.display = 'block';
+
+        let savedUsername = localStorage.getItem('username');
+        if (savedUsername) {
+        document.getElementById('username-value').textContent = savedUsername;
+        document.getElementById('display-username').style.display = 'block';
+        document.getElementById('change-username').style.display = 'block';
+
+        // Hiding the username label, input field and save button
+        document.getElementById('username-label').style.display = 'none';
+        document.getElementById('username').style.display = 'none';
+        document.getElementById('save-username').style.display = 'none';
+    }
+    });
+
+    document.getElementById('change-username').addEventListener('click', function() {
+        // Show username label, input field and save button
+        document.getElementById('username-label').style.display = 'block';
+        document.getElementById('username').style.display = 'block';
+        document.getElementById('save-username').style.display = 'block';
+    
+        // Preset current user name in the input field
+        document.getElementById('username').value = localStorage.getItem('username') || '';
+    
+        // “Change username” button and hide displayed username
+        document.getElementById('display-username').style.display = 'none';
+        this.style.display = 'none'; // this refers to the "change-username" button
     });
 };
 
@@ -209,7 +236,6 @@ const displayResult = () => {
     localStorage.setItem('charsPerMinute', charsPerMinute);
     localStorage.setItem('accuracy', accuracy);
     localStorage.setItem('keystrokes', keystrokes);
-    console.log(wordsPerMinute, charsPerMinute, accuracy, keystrokes);
 
     // View results
     document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
