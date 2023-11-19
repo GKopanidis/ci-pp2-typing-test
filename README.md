@@ -98,7 +98,7 @@ The site contains all the necessary features of a simple, functioning website.
 
    - The reasons will allow the user to see the benefits of buying the mower blade plates.
 
-<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/92bb83dd-f283-4bf9-87c9-5bcea028d42e" width="75%" height="75%">
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/34a38d65-9a2a-49c6-9414-07199e8d18e3" width="75%" height="75%">
 
 - __The Footer__
 
