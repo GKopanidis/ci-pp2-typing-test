@@ -158,11 +158,8 @@ The site contains all the necessary features of a simple, functioning website.
 
 ### Features Left to Implement
 
-- Add more products in the future.
-
-(Since I haven't learned JAVA at this point, this function could not be integrated yet)
-- Form data store to database
-- Email notification to business email address, when form was filled out and sent. 
+- Add more difficulties
+- Add your own text
 
 
 <!-- TOC --><a name="testing"></a>
@@ -180,40 +177,20 @@ The site contains all the necessary features of a simple, functioning website.
 
       Index.html
 
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/441b3aca-e14d-4900-8cb8-6c72622bf777" width="75%" height="75%">
-
-      Products.html
-
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/3e0066d8-eb0e-4975-9006-ba2606976b61" width="75%" height="75%">
-
-      Gallery.html
-
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/b70dff3d-54f0-4789-9d9a-88fbeeb527ed" width="75%" height="75%">
-
-      Company.html
-
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/3e1f9aca-70a5-43bf-8e16-53595a19e974" width="75%" height="75%">
-
-      Contact.html
-
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/aeb3a05d-e53b-49f0-bbb9-6274ae11446c" width="75%" height="75%">
-
-      Thankyou.html
-     
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/8678b63c-b8e0-4c4c-8b0d-e5f73d6b473c" width="75%" height="75%">
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0d254423-4028-4acd-bd68-300af608125b" width="75%" height="75%">
      
       404.html
 
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/3afd52ee-b458-455e-9f5d-3e118e3ee32b" width="75%" height="75%">
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/935684e3-ca85-4bdd-acd8-bd71a4fb9172" width="75%" height="75%">
 
 
 - CSS ([Jigsaw](https://jigsaw.w3.org/css-validator/))
 
-   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/)
 
       CSS Stylesheet
 
-      <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/357f1844-7222-4686-8b95-15fbc02075bd" width="75%" height="75%">
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/d7d3dd7c-cff7-47af-a60b-067018a57d49" width="75%" height="75%">
 
 
 <!-- TOC --><a name="lighthouse"></a>
@@ -224,27 +201,7 @@ The site contains all the necessary features of a simple, functioning website.
 
      Index HTML
 
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/5b12a5d1-aa08-418f-bd6c-42e65951efe1">
-
-     Products HTML
-
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/56421cf9-a9f6-4009-8b23-89e19298cf78">
-
-     Gallery HTML
-     
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/a132c2b3-0b92-46a7-9d75-0b1de7499c4c">
-
-     Company HTML
-
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/b5dec573-d41c-4593-9614-1d4ae11b0eb6">
-
-     Contact HTML
-
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/35b11088-573e-4cbc-b9a0-6266987b5f59">
-
-     Thankyou HTML
-
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/14fad211-1965-4a5a-926c-8aa08b46fa20">
+     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/6eb22f97-e608-45d4-88b0-7e3f82e56c0e">
 
      404 HTML
 
