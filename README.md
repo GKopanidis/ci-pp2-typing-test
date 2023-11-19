@@ -30,6 +30,10 @@ Link to [live site](https://gkopanidis.github.io/ci-pp2-typing-test/)
 
 - [Logical Flow](#logical-flow)
 
+- [UX](#ux)
+   - [Site Goals](#site-goals)
+   - [User Stories](#user-stories) 
+
 - [Testing](#testing)
 
    - [Validator Testing](#validator-testing)
@@ -171,6 +175,27 @@ The site contains all the necessary features of a simple, functioning website.
 
 <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/d1ed1a61-569a-49e3-9a18-11f1e8885034" width="50%" height="50%">
 
+
+<!-- TOC --><a name="logical-flow"></a>
+
+## UX
+
+<!-- TOC --><a name="site-goals"></a>
+
+### Site Goals
+
+As a user looking to improve my typing speed and accuracy, I want to use an interactive typing test, so that I can assess my skills at various difficulty levels and track my progress over time.
+
+<!-- TOC --><a name="user-stories"></a>
+
+### User Stories
+
+As a site visitor I want to:
+
+* Various Difficulty Levels: The test should offer various difficulty levels (e.g., easy, medium, hard), based on the length and complexity of the texts.
+* Timed Tests: Each test should be timed to measure speed.
+* Accuracy Rating: After completing a test, an accuracy rating should be displayed, indicating how many mistakes were made.
+* Progress Tracking: The ability to save and display results over time to track progress.
 
 <!-- TOC --><a name="testing"></a>
 
@@ -325,8 +350,10 @@ Testing was focused to ensure the following criteria were met:
 ### Fixed Bugs
 
 - HTML
-<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/9b2526cd-b343-45ed-8342-871f3652eaf4" width="50%" height="50%">
-<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0f0aac8d-e471-4701-8bf3-39baeb1bafbf" width="50%" height="50%">
+  <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/9b2526cd-b343-45ed-8342-871f3652eaf4" width="50%" height="50%">
+
+- CSS
+  The property clip is deprecated. I used clip-path instead, and the error was gone.
 
 <!-- TOC --><a name="unfixed-bugs"></a>
 
