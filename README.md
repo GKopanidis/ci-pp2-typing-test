@@ -91,27 +91,27 @@ The site contains all the necessary features of a simple, functioning website.
    - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would apply to.
    - This pages show the user the typing test with the the username input, game modes and the instructions.
 
-![Landing Page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/cd6ac62d-a7b2-4a19-a080-80a8300e0a03)
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/cd6ac62d-a7b2-4a19-a080-80a8300e0a03" width="75%" height="75%">
 
 
 - __Instrucions button__
 
    - The reasons will allow the user to see the benefits of buying the mower blade plates.
 
-![Instructions](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/92bb83dd-f283-4bf9-87c9-5bcea028d42e)
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/92bb83dd-f283-4bf9-87c9-5bcea028d42e" width="75%" height="75%">
 
 - __The Footer__
 
    - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user.
    - The footer is valuable to the user as it encourages them to keep connected via social media
 
-![Footer](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/e088102b-da86-4083-bf6b-cb9989f06628)
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/e088102b-da86-4083-bf6b-cb9989f06628" width="75%" height="75%">
 
 - __The 404 error Page__
 
    - This page will show the custom 404 page if someone clicks on a broken link.
 
-![404 page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0a82683f-9d46-4bab-8524-3c1add742390)
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0a82683f-9d46-4bab-8524-3c1add742390" width="75%" height="75%">
 
 
 <!-- TOC --><a name="technologies"></a>
