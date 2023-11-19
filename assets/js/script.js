@@ -1,20 +1,5 @@
 /**
  * Generates random quotes 
- * 
- *   ___________________  _____ __________________________    _______    _________    _____    __      __.___ _______              
- /   _____/\______   \/  _  \\______   \__    ___/  _  \   \      \  /   _____/   /  |  |  /  \    /  \   |\      \             
- \_____  \  |     ___/  /_\  \|       _/ |    | /  /_\  \  /   |   \ \_____  \   /   |  |_ \   \/\/   /   |/   |   \            
- /        \ |    |  /    |    \    |   \ |    |/    |    \/    |    \/        \ /    ^   /  \        /|   /    |    \           
-/_______  / |____|  \____|__  /____|_  / |____|\____|__  /\____|__  /_______  / \____   |    \__/\  / |___\____|__  /           
-        \/                  \/       \/                \/         \/        \/       |__|         \/              \/            
-                                                                                                                                                                                                                                                   
-                                                                                                                                
-   _____  __      __________   ________       _____  __      __________   ________       _____  __      __________   ________   
-  /  _  \/  \    /  \_____  \  \_____  \     /  _  \/  \    /  \_____  \  \_____  \     /  _  \/  \    /  \_____  \  \_____  \  
- /  /_\  \   \/\/   //   |   \  /   |   \   /  /_\  \   \/\/   //   |   \  /   |   \   /  /_\  \   \/\/   //   |   \  /   |   \ 
-/    |    \        //    |    \/    |    \ /    |    \        //    |    \/    |    \ /    |    \        //    |    \/    |    \
-\____|__  /\__/\  / \_______  /\_______  / \____|__  /\__/\  / \_______  /\_______  / \____|__  /\__/\  / \_______  /\_______  /
-        \/      \/          \/         \/          \/      \/          \/         \/          \/      \/          \/         \/ 
  */
 const shownTextSection = document.getElementById("shownText");
 const userInput = document.getElementById("shownTextInput");
@@ -253,7 +238,7 @@ const displayResult = () => {
     let second = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
     let third = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
     if (!localStorage.getItem(first)) {
-        localStorage.setItem('first', first)
+        localStorage.setItem('first', first);
     }
     //console.log(localStorage.getItem(first).wordsPerMinute);
 
