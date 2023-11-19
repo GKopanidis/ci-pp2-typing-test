@@ -124,7 +124,8 @@ The site contains all the necessary features of a simple, functioning website.
 * CSS ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
    * The Website was styled using custom CSS in an external file.
  
-* JavaScript ![JS]https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+* JavaScript ![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+   * The logic was created using JavaScript in an external file.
 
 * Visual Studio Code ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
    * The website was developed using Visual Studio Code IDE
