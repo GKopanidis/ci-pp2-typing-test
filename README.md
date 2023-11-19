@@ -201,11 +201,11 @@ The site contains all the necessary features of a simple, functioning website.
 
      Index HTML
 
-     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/6eb22f97-e608-45d4-88b0-7e3f82e56c0e">
+     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/6eb22f97-e608-45d4-88b0-7e3f82e56c0e" width="75%" height="75%">
 
      404 HTML
 
-     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/5d1d77ea-2d73-4f7f-8c6d-7f5c0717ba50">
+     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/056ef330-51e8-4c39-8607-1a968093a31d" width="75%" height="75%">
 
 
 <!-- TOC --><a name="tested-browser"></a>
@@ -308,6 +308,10 @@ Testing was focused to ensure the following criteria were met:
 
 ### Fixed Bugs
 
+- HTML
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/9b2526cd-b343-45ed-8342-871f3652eaf4" width="50%" height="50%">
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0f0aac8d-e471-4701-8bf3-39baeb1bafbf" width="50%" height="50%">
+
 <!-- TOC --><a name="unfixed-bugs"></a>
 
 ### Unfixed Bugs
@@ -343,8 +347,7 @@ The following git commands were used throughout development to push code to the 
    - From the source section drop-down menu, select the master branch
    - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-[The live link can be found here](https://gkopanidis.github.io/LawnMowerPlates/ "ZTTLPrint")
-
+[The live link can be found here](https://gkopanidis.github.io/ci-pp2-typing-test/ "A simple typing test")
 
 <!-- TOC --><a name="clone-repo-locally"></a>
 
@@ -370,21 +373,24 @@ The project will now be cloned on your local machine for use.
 
 ### Content
 
-- Thanks to [Dee-McG](https://github.com/Dee-McG) for helping with this video for the 404 page [Create a custom 404 error page](https://www.youtube.com/watch?v=Jj42_s3KnuM&list=PLXuTq6OsqZjYGLkK4d0RExJ98-m-IOIc2&index=3)
-- Thanks to [Salko Nuhanovic](https://github.com/salkonuhannovic) for sharing the information, on how to calculate the values and the hall of fame.
-- The fonts "Roboto" [Google Fonts](https://fonts.google.com)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-- The code for HTML and CSS was partially from the walkthrough project from [Code Institute](https://codeinstitute.net) with modified code.
-- The table of contents was made with [Markdown TOC generator](https://derlin.github.io/bitdowntoc/)
+- The typing test is based on this YouTube video: [Typing Test](https://www.youtube.com/watch?v=GaeLfE3p9Xc)
+- The quote generator is based on this repository: [Quotable](https://github.com/lukePeavey/quotable)
+- Thanks to [Gareth-McGirr](https://github.com/Gareth-McGirr) for sharing the information on [The modals](https://www.w3schools.com/howto/howto_css_modals.asp) and [LocalStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+- Thanks to [Dee-McG](https://github.com/Dee-McG) for assisting with the video for the custom 404 page [Create a custom 404 error page](https://www.youtube.com/watch?v=Jj42_s3KnuM&list=PLXuTq6OsqZjYGLkK4d0RExJ98-m-IOIc2&index=3)
+- Thanks to [Salko Nuhanovic](https://github.com/salkonuhannovic) for sharing the information, on how to calculate the values for the result and the hall of fame.
+- The "Roboto" font is from [Google Fonts](https://fonts.google.com)
+- The icons in the footer are from [Font Awesome](https://fontawesome.com/)
+- The HTML and CSS code was partially derived from the walkthrough project at [Code Institute](https://codeinstitute.net) with modifications.
+- The table of contents was created using the [Markdown TOC generator](https://derlin.github.io/bitdowntoc/)
 
 
 <!-- TOC --><a name="media"></a>
 
 ### Media
 
-### Background image for Main-, Products-, Company-, Contact-, Thankyou- and 404-Page  :
+### Background image for Main- and 404-Page  :
 
-### Gallery Pictures:
+- AI image generator
 
 
 <!-- TOC --><a name="acknowledgments"></a>
