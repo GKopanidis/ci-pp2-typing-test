@@ -111,7 +111,7 @@ The site contains all the necessary features of a simple, functioning website.
 
    - This page will show the custom 404 page if someone clicks on a broken link.
 
-![404]()
+![404 page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/793ebdbe-d5ac-454d-bfc9-012a269f21d8)
 
 
 <!-- TOC --><a name="technologies"></a>
@@ -123,6 +123,8 @@ The site contains all the necessary features of a simple, functioning website.
 
 * CSS ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
    * The Website was styled using custom CSS in an external file.
+ 
+* JavaScript ![JS]https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 
 * Visual Studio Code ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
    * The website was developed using Visual Studio Code IDE
