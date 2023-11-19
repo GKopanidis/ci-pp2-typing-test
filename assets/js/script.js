@@ -26,7 +26,7 @@ let span = document.getElementsByClassName("close")[0];
  */
 const renderNewQuote = async (min, max) => {
     //Get a random quote from api
-    const response = await fetch("https://api.quotable.io/random?minLength="+min+"&maxLength="+max);
+    const response = await fetch("https://api.quotable.io/random?minLength=" + min + "&maxLength=" + max);
     //Store response
     let data = await response.json();
     //Access quote
@@ -78,7 +78,7 @@ userInput.addEventListener("input", () => {
         }
     });
 
-        correctWords = correctIndexes.size;
+    correctWords = correctIndexes.size;
     incorrectWords = incorrectIndexes.size;
 
     document.getElementById("correctWords").innerText = correctWords;
@@ -131,18 +131,18 @@ window.onload = () => {
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
-    document.getElementById("shownText").addEventListener("selectstart", function(event) {
+    document.getElementById("shownText").addEventListener("selectstart", function (event) {
         event.preventDefault();
     });
-    document.getElementById('save-username').addEventListener('click', function() {
+    document.getElementById('save-username').addEventListener('click', function () {
         let username = document.getElementById('username').value;
         localStorage.setItem('username', username);
-    
+
         // Hide label, button and input field
         document.getElementById('username-label').style.display = 'none';
         this.style.display = 'none'; // this is for "save-username" button
         document.getElementById('username').style.display = 'none';
-    
+
         // Show saved username
         document.getElementById('username-value').textContent = username;
         document.getElementById('display-username').style.display = 'block';
@@ -150,26 +150,26 @@ window.onload = () => {
 
         let savedUsername = localStorage.getItem('username');
         if (savedUsername) {
-        document.getElementById('username-value').textContent = savedUsername;
-        document.getElementById('display-username').style.display = 'block';
-        document.getElementById('change-username').style.display = 'block';
+            document.getElementById('username-value').textContent = savedUsername;
+            document.getElementById('display-username').style.display = 'block';
+            document.getElementById('change-username').style.display = 'block';
 
-        // Hiding the username label, input field and save button
-        document.getElementById('username-label').style.display = 'none';
-        document.getElementById('username').style.display = 'none';
-        document.getElementById('save-username').style.display = 'none';
-    }
+            // Hiding the username label, input field and save button
+            document.getElementById('username-label').style.display = 'none';
+            document.getElementById('username').style.display = 'none';
+            document.getElementById('save-username').style.display = 'none';
+        }
     });
 
-    document.getElementById('change-username').addEventListener('click', function() {
+    document.getElementById('change-username').addEventListener('click', function () {
         // Show username label, input field and save button
         document.getElementById('username-label').style.display = 'block';
         document.getElementById('username').style.display = 'block';
         document.getElementById('save-username').style.display = 'block';
-    
+
         // Preset current user name in the input field
         document.getElementById('username').value = localStorage.getItem('username') || '';
-    
+
         // “Change username” button and hide displayed username
         document.getElementById('display-username').style.display = 'none';
         this.style.display = 'none'; // this refers to the "change-username" button
@@ -208,7 +208,7 @@ const displayResult = () => {
 
     //Calculating the total number of words and characters per minute
     const words = userInput.value.trim().split(/\s+/).length;
-    
+
     //Display result div
     document.querySelector(".result").style.display = "block";
     document.getElementById("easy-mode").style.display = "block";
@@ -217,30 +217,33 @@ const displayResult = () => {
     document.getElementById("stop-test").style.display = "none";
     clearInterval(timer);
     userInput.disabled = true;
-    
+
     // Calculate elapsed time
     if (time <= 0) {
         timeTaken = 1;
     }
-    
+
     if (words > 0 && timeTaken > 0) {
         wordsPerMinute = (words / timeTaken * 60).toFixed(0);
         charsPerMinute = (userInput.value.length / timeTaken * 60).toFixed(0);
-        if (userInput.value.length == 0){
+        if (userInput.value.length == 0) {
             accuracy = 0;
             wordsPerMinute = 0;
         } else {
             accuracy = Math.round(((userInput.value.length - incorrectWords) / userInput.value.length) * 100);
-        } 
+        }
     }
 
-    let first = {"wordsPerMinute": wordsPerMinute, "charsPerMinute": charsPerMinute, "accuracy": accuracy, "keystrokes": keystrokes, "username": document.getElementById('username').value};
-    let second = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
-    let third = {"wordsPerMinute": 0, "charsPerMinute": 0, "accuracy": 0, "keystrokes": 0, "username": ""};
-    if (!localStorage.getItem(first)) {
-        localStorage.setItem('first', first);
-    }
-    //console.log(localStorage.getItem(first).wordsPerMinute);
+    addNewHighscore({
+        "wordsPerMinute": wordsPerMinute,
+        "charsPerMinute": charsPerMinute,
+        "accuracy": accuracy,
+        "keystrokes": keystrokes,
+        "username": document.getElementById('username').value
+    });
+
+    displayHighscoresInDiv();
+
 
     // View results
     document.getElementById("charsPerMinute").innerText = charsPerMinute + " cpm";
@@ -254,7 +257,7 @@ const displayResult = () => {
         document.getElementById("godlike").innerText = "GODLIKE :D";
     } else {
         document.getElementById("godlike").style.display = "none";
-    }    
+    }
 
     // Resetting the test display
     document.getElementById("easy-mode").style.display = "block";
@@ -297,3 +300,69 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
+
+/**
+ * Function to create the high score
+ */
+
+// Function to load the high score from local storage
+function loadHighscores() {
+    let highscores = JSON.parse(localStorage.getItem('highscores'));
+    if (!highscores) {
+        highscores = [];
+    }
+    return highscores;
+}
+
+// Function to save the high score in local storage
+function saveHighscores(highscores) {
+    localStorage.setItem('highscores', JSON.stringify(highscores));
+}
+
+// Function to calculate the total score of a high score object
+function calculateTotalScore(scoreObject) {
+    return scoreObject.accuracy + scoreObject.keystrokes;
+}
+
+// Function to add a new high score
+function addNewHighscore(newScore) {
+    let highscores = loadHighscores();
+
+    // Calculate the total score for the new score
+    let totalScore = calculateTotalScore(newScore);
+
+    // Find the right position for the new score and insert it
+    let positionFound = false;
+    for (let i = 0; i < highscores.length; i++) {
+        if (calculateTotalScore(highscores[i]) < totalScore) {
+            highscores.splice(i, 0, newScore);
+            positionFound = true;
+            break;
+        }
+    }
+
+    // If the score was not inserted and there are less than 3 high scores, add it at the end
+    if (!positionFound && highscores.length < 3) {
+        highscores.push(newScore);
+    }
+
+    // Keep only the top 3 scores
+    if (highscores.length > 3) {
+        highscores = highscores.slice(0, 3);
+    }
+
+    saveHighscores(highscores);
+}
+
+// Function to display the high scores in an HTML div
+function displayHighscoresInDiv() {
+    let highscores = loadHighscores();
+    let displayDiv = document.getElementById('highscoreDisplay');
+
+    let htmlContent = '<h2>Highscore</h2>';
+    highscores.forEach((score, index) => {
+        htmlContent += `<p>Place ${index + 1}: ${score.username} - Accuracy: ${score.accuracy}%, CPM: ${score.charsPerMinute}, Keystrokes: ${score.keystrokes}, WPM: ${score.wordsPerMinute} </p>`;
+    });
+
+    displayDiv.innerHTML = htmlContent;
+}

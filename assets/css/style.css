@@ -157,6 +157,11 @@ button {
     font-size: x-large;
 }
 
+#highscoreDisplay{
+    text-align: center;
+    margin: auto;
+}
+
 #wrapper {
     display: flex;
     justify-content: space-around;
