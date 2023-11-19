@@ -190,7 +190,7 @@ As a user looking to improve my typing speed and accuracy, I want to use an inte
 
 ### User Stories
 
-As a site visitor I want to:
+As a site visitor I want:
 
 * Various Difficulty Levels: The test should offer various difficulty levels (e.g., easy, medium, hard), based on the length and complexity of the texts.
 * Timed Tests: Each test should be timed to measure speed.
