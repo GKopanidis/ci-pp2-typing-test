@@ -242,8 +242,8 @@ As a creator I want:
    
    - No errors were returned when passing through the JShint validator
 
-      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/54d04cb1-788e-46f2-8c84-382e71d29a49" width="75%" height="75%">
-      
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0a88c3fe-f700-4904-abeb-8a5e5b8166cb" width="75%" height="75%">
+
 
 <!-- TOC --><a name="lighthouse"></a>
 
