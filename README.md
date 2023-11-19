@@ -27,6 +27,9 @@ Link to [live site](https://gkopanidis.github.io/ci-pp2-typing-test/)
    - [Technolgies used](#technologies)
 
 - [Features Left to Implement](#features-left-to-implement)
+
+- [Logical Flow](#logical-flow)
+
 - [Testing](#testing)
 
    - [Validator Testing](#validator-testing)
@@ -94,7 +97,7 @@ The site contains all the necessary features of a simple, functioning website.
 <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/cd6ac62d-a7b2-4a19-a080-80a8300e0a03" width="75%" height="75%">
 
 
-- __Instrucions button__
+- __Instructions button__
 
    - The reasons will allow the user to see the benefits of buying the mower blade plates.
 
@@ -162,6 +165,13 @@ The site contains all the necessary features of a simple, functioning website.
 - Add your own text
 
 
+<!-- TOC --><a name="logical-flow"></a>
+
+### Logical Flow
+
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/d1ed1a61-569a-49e3-9a18-11f1e8885034" width="50%" height="50%">
+
+
 <!-- TOC --><a name="testing"></a>
 
 ## Testing
@@ -192,6 +202,12 @@ The site contains all the necessary features of a simple, functioning website.
 
       <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/d7d3dd7c-cff7-47af-a60b-067018a57d49" width="75%" height="75%">
 
+- JavaScript [JSHint Validator](https://jshint.com/)
+   
+   - No errors were returned when passing through the JShint validator
+
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/54d04cb1-788e-46f2-8c84-382e71d29a49" width="75%" height="75%">
+      
 
 <!-- TOC --><a name="lighthouse"></a>
 
@@ -375,7 +391,7 @@ The project will now be cloned on your local machine for use.
 
 - The typing test is based on this YouTube video: [Typing Test](https://www.youtube.com/watch?v=GaeLfE3p9Xc)
 - The quote generator is based on this repository: [Quotable](https://github.com/lukePeavey/quotable)
-- Thanks to [Gareth-McGirr](https://github.com/Gareth-McGirr) for sharing the information on [The modals](https://www.w3schools.com/howto/howto_css_modals.asp) and [LocalStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+- Thanks to [Gareth-McGirr](https://github.com/Gareth-McGirr) for sharing the information on [Modals](https://www.w3schools.com/howto/howto_css_modals.asp), [LocalStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) and [Lucid Chart](https://www.lucidchart.com/pages/) for the flowcharts.
 - Thanks to [Dee-McG](https://github.com/Dee-McG) for assisting with the video for the custom 404 page [Create a custom 404 error page](https://www.youtube.com/watch?v=Jj42_s3KnuM&list=PLXuTq6OsqZjYGLkK4d0RExJ98-m-IOIc2&index=3)
 - Thanks to [Salko Nuhanovic](https://github.com/salkonuhannovic) for sharing the information, on how to calculate the values for the result and the hall of fame.
 - The "Roboto" font is from [Google Fonts](https://fonts.google.com)
