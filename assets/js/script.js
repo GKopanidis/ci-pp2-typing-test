@@ -146,6 +146,9 @@ window.onload = () => {
     document.getElementById("stop-test").style.display = "none";
     userInput.disabled = true;
     renderNewQuote();
+    document.getElementById("shownText").addEventListener("selectstart", function(event) {
+        event.preventDefault();
+    });
     document.getElementById('save-username').addEventListener('click', function() {
         let username = document.getElementById('username').value;
         localStorage.setItem('username', username);
