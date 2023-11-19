@@ -350,7 +350,10 @@ Testing was focused to ensure the following criteria were met:
 ### Fixed Bugs
 
 - HTML
+  
   <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/9b2526cd-b343-45ed-8342-871f3652eaf4" width="50%" height="50%">
+
+  I added an event listener to the JavaScript code on 'window.onload.
 
 - CSS
   The property clip is deprecated. I used clip-path instead, and the error was gone.
@@ -370,7 +373,7 @@ Testing was focused to ensure the following criteria were met:
 
 ### Version Control
 
-The site was created using the Visual Studio code editor and pushed to Git Hub to the remote repository ‘LawnMowerPlates’.
+The site was created using the Visual Studio code editor and pushed to Git Hub to the remote repository ‘ci-pp2-typing-test’.
 
 The following git commands were used throughout development to push code to the remote repo:
 
