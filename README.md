@@ -70,9 +70,9 @@ The first [wireframes in Balsamiq](https://www.balsamiq.com) show a very simple 
 
 ### Font and Colour choices
 
-**Fonts:** The Fonts used: "Audiowide" and "Roboto"
+**Fonts:** The Fonts used: "Roboto"
 
-**Colours:** Colours used: #3a3a3a, #fafafa, #ffffff, #ff0000, #555, #6aff00
+**Colours:** Colours used: #000000, #ffffff, lightseagreen, red, green
 
 
 <!-- TOC --><a name="features"></a>
@@ -86,85 +86,32 @@ The site contains all the necessary features of a simple, functioning website.
 
 ### Existing Features
 
-- __Navigation Bar__
-
-   - Featured on all five pages, the full responsive navigation bar includes links to the Logo, Home page, Products, Gallery, Company, and Contact page and is identical on each page to allow for easy navigation.
-   - This section will allow the user to easily navigate from page to page across all devices without having to revert to the previous page via the ‘back’ button.
-
-![NavBar](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/87dec414-e9d0-4ec3-84ec-fed645aac281)
-
-
 - __The landing page image__
 
    - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would apply to.
-   - This section introduces the user to the mowing plates with an eye-catching picture to grab their attention
+   - This pages show the user the typing test with the the username input, game modes and the instructions.
 
-![Landing Page](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/1cbbab69-45b0-47b0-9bc4-d7b48196bbd7)
+![Landing Page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/cd6ac62d-a7b2-4a19-a080-80a8300e0a03)
 
 
-- __Reasons Section__
+- __Instrucions button__
 
    - The reasons will allow the user to see the benefits of buying the mower blade plates.
 
-![Reasons](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/bf0ef34c-9491-40d4-ba62-181f5e194f40)
-
-
-- __Benefits section__
-
-   - This section will allow the user to see exactly the benefits of the products.
-   - This section will be updated as these times change to keep the user up to date.
-
-![Benefits](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/f7653cf6-1641-4a6e-83bc-771a084cf704)
-
+![Instructions](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/92bb83dd-f283-4bf9-87c9-5bcea028d42e)
 
 - __The Footer__
 
-   - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user.
+   - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user.
    - The footer is valuable to the user as it encourages them to keep connected via social media
 
-![Footer](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/33c21837-0e6b-4d71-94e2-a9f3d828031a)
-
-
-- __Products Page__
-
-   - The products page shows the products with prices and some technical information.
-
-![Products](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/d0774098-b9a6-4553-834c-ff1f82cc5d62)
-
-
-- __Gallery__
-
-   - The gallery will provide the user with supporting images to see what perfect lawns look like.
-
-![Gallery](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/3d2a61cd-e0f7-478c-9f48-ec15c11eee77)
-
-
-- __The Company Page__
-
-   - This page shows the user where the company headquarters is and how to get there. You can also find the telephone number and email address there.
-
-![Company](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/f9b7ba01-1bae-4f44-a63f-4c9145ef6090)
-
-
-- __The Contact Page__
-
-   - This page will allow the user to send a message with the desired product.
-
-![Contact](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/162f2cd6-cf02-4f0e-942d-ad2b4658047e)
-
-
-- __The Thankyou Page__
-
-   - This page will show the Thankyou message, after submitting the form and the information, it will be automatically redirected to the start page.
-
-![Thankyou](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/2e7da55a-096c-49e4-8cbe-dbd8d18d75d5)
-
+![Footer](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/e088102b-da86-4083-bf6b-cb9989f06628)
 
 - __The 404 error Page__
 
    - This page will show the custom 404 page if someone clicks on a broken link.
 
-![404](https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/cc54e37c-803e-4ef9-afaf-bb2dddce5833)
+![404]()
 
 
 <!-- TOC --><a name="technologies"></a>
