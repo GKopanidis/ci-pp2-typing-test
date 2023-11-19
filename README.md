@@ -93,7 +93,7 @@ The site contains all the necessary features of a simple, functioning website.
 
 ### Existing Features
 
-- __The landing page image__
+- __The landing page__
 
    - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would apply to.
    - This pages show the user the typing test with the the username input, game modes and the instructions.
