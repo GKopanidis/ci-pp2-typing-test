@@ -107,6 +107,12 @@ The site contains all the necessary features of a simple, functioning website.
 
 <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/34a38d65-9a2a-49c6-9414-07199e8d18e3" width="75%" height="75%">
 
+- __Results & Highscore__
+
+  - After finishing the test, the result/high score appears.
+ 
+<img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/1cd5d189-1ddc-4903-bec1-1bcd1b8ec71d" width="75%" height="75%">   
+
 - __The Footer__
 
    - The footer section includes links to the relevant social media sites. The links will open to a new tab to allow easy navigation for the user.
@@ -242,7 +248,7 @@ As a creator I want:
    
    - No errors were returned when passing through the JShint validator
 
-      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0a88c3fe-f700-4904-abeb-8a5e5b8166cb" width="75%" height="75%">
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/63521927-a852-4e87-9a84-bb315cd71e5c" width="75%" height="75%">
 
 
 <!-- TOC --><a name="lighthouse"></a>
