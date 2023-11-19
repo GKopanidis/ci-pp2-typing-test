@@ -197,6 +197,17 @@ As a site visitor I want:
 * Accuracy Rating: After completing a test, an accuracy rating should be displayed, indicating how many mistakes were made.
 * Progress Tracking: The ability to save and display results over time to track progress.
 
+As a creator I want:
+
+* Present the content in a understandable manner
+* Site is easily understandable
+* Clear indication about time left to complete the quote
+* Clear indication about correct/incorrect character inputs
+* Clear indication about written words
+* Let the visitor know how well they performed
+* Give the player option to play again or change the name if desired
+* Main goal is to offer some fun and education 
+
 <!-- TOC --><a name="testing"></a>
 
 ## Testing
