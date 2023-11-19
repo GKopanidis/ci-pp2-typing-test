@@ -173,6 +173,7 @@ The site contains all the necessary features of a simple, functioning website.
 
 - Add more difficulties
 - Add your own text
+- Add new player / username
 
 
 <!-- TOC --><a name="logical-flow"></a>
