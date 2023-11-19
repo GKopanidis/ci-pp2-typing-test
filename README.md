@@ -111,7 +111,7 @@ The site contains all the necessary features of a simple, functioning website.
 
    - This page will show the custom 404 page if someone clicks on a broken link.
 
-![404 page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/793ebdbe-d5ac-454d-bfc9-012a269f21d8)
+![404 page](https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/0a82683f-9d46-4bab-8524-3c1add742390)
 
 
 <!-- TOC --><a name="technologies"></a>
