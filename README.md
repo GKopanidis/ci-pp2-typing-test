@@ -205,7 +205,7 @@ The site contains all the necessary features of a simple, functioning website.
 
      404 HTML
 
-     <img src="https://github.com/GKopanidis/LawnMowerPlates/assets/145017421/7964397b-d817-4d82-8209-fed960b19b3d">
+     <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/5d1d77ea-2d73-4f7f-8c6d-7f5c0717ba50">
 
 
 <!-- TOC --><a name="tested-browser"></a>
@@ -256,11 +256,14 @@ The site contains all the necessary features of a simple, functioning website.
 
 | Feature     | Expect      | Action        | Result |
 | :---------: | :----------:| :-----------: | :-----:|
-| **Links icons**  | Links open relevant websites in actual tab when clicked | Click all individual links | All respective sites open in active tab |
-| **Social link icons** | Social link icons open relevant websites a new tab when clicked| Click all individual icons | All respective sites open a new tab |
-| **Contact Page**  | When entering a first name, last name, email address, and message and selecting one option (radio buttons) the thankyou page appears | Enter all fields and press "Send Message!" | Thankyou page appears and after 10sec it redirects to the index.html |
-| **Contact Page missing fields**  | When not entering a first name, last name, or email address, which is not correctly formatted, then an error appears | Enter the correct format into fields and press "Send Message!" | Congratulations page appears and displays the entered fields |
-| **404 Page**  | When entering a wrong URL, a 404 error appears | Enter the incorrect URL in the address bar and press enter | 404 error page appears and displays the message and a link to the main page |
+| **Enter Username**  | Upon entering a username, it is displayed. | Click on the 'Save' button. | Username and 'Change Username' button appear. |
+| **Change Username**  | Clicking 'Change Username' displays the current username, allowing for edits. A 'Save' button appears. | Click on the 'Change Username' button. | An input field and 'Save' button appear. |
+| **Game Modes**  | Clicking links generate random quotes. | Click on each individual mode. | Each respective link generates a new quote. |
+| **Start selected Game Mode**  |Clicking starts the game mode, a 'Stop Test' button appears, and the input field activates for typing. | Click on a selected game mode. | Input field activates, 'Stop' button appears, and the timer starts upon typing. |
+| **Stop Test**  | Results are displayed under the game modes. | Click on 'Stop Test'. | Results appear beneath the game modes, and the input field is deactivated. |
+| **Instrucions**  | Displays the instructions. | Click on 'Instructions'. | All instructions are displayed. |
+| **Social link icons** | Icons open the respective social media sites in a new tab. | Click on each individual icon. | Each respective site opens in a new tab. |
+| **404 Page**  | A 404 error message appears when an incorrect URL is entered. | Enter an incorrect URL in the address bar and press enter. | 404 error page appears with a message and a link to the main page. |
 
 
 <!-- TOC --><a name="responsiveness"></a>
