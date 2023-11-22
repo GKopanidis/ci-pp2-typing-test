@@ -249,7 +249,7 @@ As a creator I want:
    
    - No errors were returned when passing through the JShint validator
 
-      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/63521927-a852-4e87-9a84-bb315cd71e5c" width="75%" height="75%">
+      <img src="https://github.com/GKopanidis/ci-pp2-typing-test/assets/145017421/76f7f743-b194-481b-ac20-ccd08634e802" width="75%" height="75%">
 
 
 <!-- TOC --><a name="lighthouse"></a>
