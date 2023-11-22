@@ -40,7 +40,7 @@ const renderNewQuote = async (min, max) => {
     shownTextSection.innerHTML += arr.join("");
 };
 
-// wordCount function
+// wordCount function, splits user input into an array of words, removing extra whitespace.
 const updateWordCount = () => {
     const words = userInput.value.trim().split(/\s+/);
     wordCount = words.filter(word => word.length > 0).length;
