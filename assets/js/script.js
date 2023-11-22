@@ -33,7 +33,7 @@ const renderNewQuote = async (min, max) => {
     //Store response
     let data = await response.json();
     //Access quote
-    quote = data.content;
+    let quote = data.content;
     //Array of characters in the quote
     let arr = quote.split("").map((value) => {
         //wrap the characters in a span tag
