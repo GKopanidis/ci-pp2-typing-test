@@ -3,17 +3,20 @@
  */
 const shownTextSection = document.getElementById("shownText");
 const userInput = document.getElementById("shownTextInput");
+const easyModeButton = document.getElementById("easy-mode");
+const hardModeButton = document.getElementById("hard-mode");
+const extremeModeButton = document.getElementById("extreme-mode");
+const stopTestButton = document.getElementById("stop-test");
 
-let minLength = 80;
-let maxLength = 100;
-let shownText = "";
 let time = 60;
 let timer = "";
 let correctWords = 0;
 let incorrectWords = 0;
 let wordCount = 0;
 let keystrokes = 0;
-let lastCorrectIndex = -1;
+let accuracy = 0;
+let charsPerMinute = 0;
+let wordsPerMinute = 0;
 let correctIndexes = new Set();
 let incorrectIndexes = new Set();
 let isTestCompleted = false;
@@ -174,6 +177,20 @@ window.onload = () => {
         document.getElementById('display-username').style.display = 'none';
         this.style.display = 'none'; // this refers to the "change-username" button
     });
+
+    easyModeButton.addEventListener("click", function() {
+        startTest(90, 100);
+    });
+    
+    hardModeButton.addEventListener("click", function() {
+        startTest(190, 200);
+    });
+    
+    extremeModeButton.addEventListener("click", function() {
+        startTest(290, 300);
+    });
+    
+    stopTestButton.addEventListener("click", displayResult);
 };
 
 /**
