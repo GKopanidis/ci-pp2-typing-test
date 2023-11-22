@@ -441,7 +441,7 @@ The project will now be cloned on your local machine for use.
 - The quote generator is based on this repository: [Quotable](https://github.com/lukePeavey/quotable)
 - Thanks to [Gareth-McGirr](https://github.com/Gareth-McGirr) for sharing the information on [Modals](https://www.w3schools.com/howto/howto_css_modals.asp), [LocalStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp) and [Lucid Chart](https://www.lucidchart.com/pages/) for the flowcharts.
 - Thanks to [Dee-McG](https://github.com/Dee-McG) for assisting with the video for the custom 404 page [Create a custom 404 error page](https://www.youtube.com/watch?v=Jj42_s3KnuM&list=PLXuTq6OsqZjYGLkK4d0RExJ98-m-IOIc2&index=3)
-- Thanks to [Salko Nuhanovic](https://github.com/salkonuhannovic) for sharing the information, on how to calculate / display the values for the result and the highscore.
+- Thanks to [Salko Nuhanovic](https://github.com/salkonuhannovic) for sharing the information, on how to calculate / display the values for the values, result and the highscore.
 - The "Roboto" font is from [Google Fonts](https://fonts.google.com)
 - The icons in the footer are from [Font Awesome](https://fontawesome.com/)
 - The HTML and CSS code was partially derived from the walkthrough project at [Code Institute](https://codeinstitute.net) with modifications.
