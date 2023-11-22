@@ -178,18 +178,18 @@ window.onload = () => {
         this.style.display = 'none'; // this refers to the "change-username" button
     });
 
-    easyModeButton.addEventListener("click", function() {
+    easyModeButton.addEventListener("click", function () {
         startTest(90, 100);
     });
-    
-    hardModeButton.addEventListener("click", function() {
+
+    hardModeButton.addEventListener("click", function () {
         startTest(190, 200);
     });
-    
-    extremeModeButton.addEventListener("click", function() {
+
+    extremeModeButton.addEventListener("click", function () {
         startTest(290, 300);
     });
-    
+
     stopTestButton.addEventListener("click", displayResult);
 };
 

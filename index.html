@@ -26,26 +26,26 @@
     <!-- Main content-->
     <main>
         <button id="myBtn">Instructions</button>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <ol>
-                        <li>Select a mode
-                            <br>
-                            - Easy Mode generates a quote between 90 and 100 characters
-                            <br>
-                            - Hard Mode generates a quote between 190 and 200 characters
-                            <br>
-                            - Extreme Mode generates a quote between 290 and 300 characters
-                            <br>
-                        </li>
-                        <li>Start typing the quote</li>
-                        <li>After you correctly enter the complete quote, the result will appear</li>
-                        <li>The goal is to reach 100% accuracy!</li>
-                        <li>NOTE: You need to complete the test correctly for it to end</li>
-                    </ol>
-                </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <ol>
+                    <li>Select a mode
+                        <br>
+                        - Easy Mode generates a quote between 90 and 100 characters
+                        <br>
+                        - Hard Mode generates a quote between 190 and 200 characters
+                        <br>
+                        - Extreme Mode generates a quote between 290 and 300 characters
+                        <br>
+                    </li>
+                    <li>Start typing the quote</li>
+                    <li>After you correctly enter the complete quote, the result will appear</li>
+                    <li>The goal is to reach 100% accuracy!</li>
+                    <li>NOTE: You need to complete the test correctly for it to end</li>
+                </ol>
             </div>
+        </div>
         <div>
             <div class="container">
                 <div class="stats">
@@ -61,10 +61,11 @@
                 <label for="shownTextInput" class="visually-hidden">Your Text:</label>
                 <textarea rows="5" id="shownTextInput" placeholder="Start typing when test starts..."></textarea>
                 <br>
-                <div class="username-input" >
+                <div class="username-input">
                     <label for="username" id="username-label">Type Username:</label>
                     <br>
-                    <input type="text" id="username" name="username" placeholder="Enter your name..."  autocomplete="off">
+                    <input type="text" id="username" name="username" placeholder="Enter your name..."
+                        autocomplete="off">
                     <br>
                     <button id="save-username">Save</button>
                     <br>

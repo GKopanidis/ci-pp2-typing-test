@@ -52,7 +52,7 @@ main {
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    display: flex ;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -93,7 +93,9 @@ textarea {
     font-size: x-large;
 }
 
-#username-label, #display-username, #username-value {
+#username-label,
+#display-username,
+#username-value {
     margin-bottom: 10px;
     font-size: x-large;
 }
@@ -157,7 +159,7 @@ button {
     font-size: x-large;
 }
 
-#highscoreDisplay{
+#highscoreDisplay {
     text-align: center;
     margin: auto;
 }
@@ -287,7 +289,8 @@ footer {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    background-color: rgba(60, 60, 60, 0.6);;
+    background-color: rgba(60, 60, 60, 0.6);
+    ;
 }
 
 .container-404 h1 {
