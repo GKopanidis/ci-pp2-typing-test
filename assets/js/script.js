@@ -1,6 +1,7 @@
 /**
- * Generates random quotes 
+ * General keywords for variables
  */
+
 const shownTextSection = document.getElementById("shownText");
 const userInput = document.getElementById("shownTextInput");
 const easyModeButton = document.getElementById("easy-mode");
@@ -177,7 +178,7 @@ window.onload = () => {
         document.getElementById('display-username').style.display = 'none';
         this.style.display = 'none'; // this refers to the "change-username" button
     });
-
+    // Create quotes for different game modes
     easyModeButton.addEventListener("click", function () {
         startTest(90, 100);
     });
