@@ -34,6 +34,56 @@ h3 {
     font-size: x-large;
 }
 
+/* The modal button */
+#myBtn {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: green;
+    float: right;
+}
+
+/* The modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content/box */
+.modal-content {
+    background-color: #ffffff;
+    margin: 30% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+/* Modal close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+li {
+    margin-left: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* Main content*/
 main {
     background: url(../images/typing-test.webp) no-repeat center center/cover;
@@ -93,6 +143,14 @@ textarea {
     font-size: x-large;
 }
 
+.correctWords {
+    color: lightseagreen;
+}
+
+.incorrectWords {
+    color: red;
+}
+
 #username-label,
 #display-username,
 #username-value {
@@ -148,6 +206,7 @@ button {
     font-size: large;
 }
 
+/* Result */
 .result {
     margin-bottom: 20px;
     display: none;
@@ -157,11 +216,6 @@ button {
     text-align: center;
     margin-bottom: 20px;
     font-size: x-large;
-}
-
-#highscoreDisplay {
-    text-align: center;
-    margin: auto;
 }
 
 #wrapper {
@@ -186,69 +240,16 @@ button {
     text-align: center;
 }
 
+#highscoreDisplay {
+    text-align: center;
+    margin: auto;
+}
+
 .hof {
     font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.correctWords {
-    color: lightseagreen;
-}
-
-.incorrectWords {
-    color: red;
-}
-
-/* The modal button */
-#myBtn {
-    margin-right: 10px;
-    margin-bottom: 20px;
-    background-color: green;
-    float: right;
-}
-
-/* The modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Modal content/box */
-.modal-content {
-    background-color: #ffffff;
-    margin: 30% auto;
-    padding: 20px;
-    border-radius: 5px;
-    width: 50%;
-}
-
-/* Modal close button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-li {
-    margin-left: 10px;
-}
-
-.close:hover,
-.close:focus {
-    color: #000000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Footer */
